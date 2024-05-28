@@ -1,5 +1,5 @@
 const Movie = require("../models/moviesModel");
-const  fs = require("fs");
+const fs = require("fs");
 const asyncErrorHandler = require("../utils/asyncErrorHandler");
 
 exports.getAllMovies = asyncErrorHandler(async (req, res) => {
@@ -8,7 +8,7 @@ exports.getAllMovies = asyncErrorHandler(async (req, res) => {
     .skip(parseInt(req.query.offset) || 0);
   res.status(200).json({
     status: "success",
-    data:  movies ,
+    data: movies,
   });
 });
 
@@ -54,29 +54,47 @@ exports.deleteMovie = asyncErrorHandler(async (req, res) => {
 
 //this function is responsible for getting movies by genre then writing the result to a file and sending the result to the client
 //can you manipulate aggregation to get the count of movies in each genre (there are formated example in result.txt in the log folder)
-// bouns: is there a better way to optimize performance 
+// bouns: is there a better way to optimize performance
 
 exports.getMoviesByGenre = asyncErrorHandler(async (req, res, next) => {
   const movies = await Movie.aggregate([
-    { $unwind: "$genre" },
+    {
+      $unwind: "$genres",
+    },
     {
       $group: {
-        _id: "$genre",
+        _id: "$genres",
         movies: { $push: "$name" },
+        movieCount: { $sum: 1 },
       },
-    },  
-    { $addFields: { genre: "$_id" } },
-    { $project: { _id: 0 } },
-    { $sort: { movieCount: -1 } },
+    },
+    {
+      $project: {
+        _id: 0,
+        genre: "$_id",
+        movies: 1,
+        movieCount: 1,
+      },
+    },
   ]);
 
-  fs.writeFileSync("./log/result.txt", JSON.stringify(movies), { flag: "a" });
+  // Stream data to the result.txt file
+  const writeStream = fs.createWriteStream("./log/result.txt", {
+    flags: "a",
+  });
+  movies.forEach((movie) => {
+    writeStream.write(`${JSON.stringify(movie, null, 2)}\n`);
+  });
+  writeStream.end();
 
+  // Send the formatted response to the client
   res.status(200).json({
     status: "success",
     count: movies.length,
-    data: {
-      movies,
-    },
+    data: movies.map((movie) => ({
+      genre: movie.genre,
+      movieCount: movie.movieCount,
+      movies: movie.movies,
+    })),
   });
 });

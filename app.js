@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 //importing routes
 const moviesRoutes = require("./routes/moviesRoutes");
+const authRoutes = require("./routes/authRoutes");
+const verifyToken = require("./middelwares/verifyToken");
 
 // config env file
 const dotEnv = require("dotenv");
@@ -10,12 +12,13 @@ dotEnv.config({ path: "./config.env" });
 //import DB connection
 require("./config/DBconnection");
 app.use(express.json());
-app.use("/movies", moviesRoutes);
+app.use("/users", authRoutes);
+app.use("/movies", verifyToken, moviesRoutes);
 
 app.all("*", (req, res, next) => {
-   const err = new Error(`can't find  ${req.originalUrl} on the server`);
-   err.status = "fail";
-   err.statusCode = 404;
+  const err = new Error(`can't find  ${req.originalUrl} on the server`);
+  err.status = "fail";
+  err.statusCode = 404;
   next(err);
 });
 
