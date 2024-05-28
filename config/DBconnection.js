@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Movie = require("../models/moviesModel"); // Adjust the path to your Movie model
+const Movie = require("../models/moviesModel"); 
 const fs = require("fs").promises;
 
 //connecting database

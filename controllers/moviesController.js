@@ -53,8 +53,8 @@ exports.deleteMovie = asyncErrorHandler(async (req, res) => {
 });
 
 //this function is responsible for getting movies by genre then writing the result to a file and sending the result to the client
-//can you manipulate aggregation to get the count of movies in each genre
-// is there a better way to optimize performance 
+//can you manipulate aggregation to get the count of movies in each genre (there are formated example in result.txt in the log folder)
+// bouns: is there a better way to optimize performance 
 
 exports.getMoviesByGenre = asyncErrorHandler(async (req, res, next) => {
   const movies = await Movie.aggregate([
