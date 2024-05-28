@@ -5,11 +5,12 @@ Backend APIs for Movies library.<br />
 1. clone the project. <br />
 2. install NodeJS on your machine.<br />
 3. run `npm i`. <br />
-4. add config.env ex: PORT=3000
-LOCAL_DB_STR=mongodb://localhost:27017/fepDB 
-ADMINNAME=Menia<br/>
-4. unComment addMovies function in ".config/DBconnection.js" to instert data (don't forget to comment it back).
-5. run  `npm start`.<br />
+4. add config.env ex:
+    -PORT=3000
+    -LOCAL_DB_STR=mongodb://localhost:27017/fepDB 
+    -ADMINNAME=Menia<br/>
+5. unComment addMovies function in ".config/DBconnection.js" to instert data (don't forget to comment it back).
+6. run  `npm start`.<br />
 
 ## APIs: 
 - movies:
