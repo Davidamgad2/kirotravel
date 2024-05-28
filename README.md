@@ -8,7 +8,7 @@ Backend APIs for Movies library.<br />
 4. add config.env ex:
     - PORT=3000
     - LOCAL_DB_STR=mongodb://localhost:27017/fepDB 
-    - ADMINNAME=Menia<br/>
+    - ADMINNAME=Mohamed<br/>
 5. unComment addMovies function in ".config/DBconnection.js" to instert data (don't forget to comment it back).
 6. run  `npm start`.<br />
 
