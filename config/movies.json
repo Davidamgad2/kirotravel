@@ -1,0 +1,101 @@
+[
+  {
+    "name": "Inception",
+    "genres": ["Action", "Sci-Fi"],
+    "description": "A mind-bending thriller about dreams within dreams.",
+    "duration": 148,
+    "actors": ["Leonardo DiCaprio", "Ellen Page"],
+    "directors": ["Christopher Nolan"],
+    "ratings": 8.8,
+    "totalRating": 1000,
+    "releaseYear": 2010
+  },
+  {
+    "name": "The Dark Knight",
+    "genres": ["Action", "Crime", "Drama"],
+    "description": "A gripping crime drama featuring Batman and the Joker.",
+    "duration": 152,
+    "actors": ["Christian Bale", "Heath Ledger"],
+    "directors": ["Christopher Nolan"],
+    "ratings": 9.0,
+    "totalRating": 1500,
+    "releaseYear": 2008
+  },
+  {
+    "name": "The Matrix",
+    "genres": ["Action", "Sci-Fi"],
+    "description": "A computer hacker learns about the true nature of reality and his role in the war against its controllers.",
+    "duration": 136,
+    "actors": ["Keanu Reeves", "Laurence Fishburne"],
+    "directors": ["Lana Wachowski", "Lilly Wachowski"],
+    "ratings": 8.7,
+    "totalRating": 1600,
+    "releaseYear": 1999
+  },
+  {
+    "name": "Gladiator",
+    "genres": ["Action", "Adventure", "Drama"],
+    "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+    "duration": 155,
+    "actors": ["Russell Crowe", "Joaquin Phoenix"],
+    "directors": ["Ridley Scott"],
+    "ratings": 8.5,
+    "totalRating": 1300,
+    "releaseYear": 2000
+  },
+  {
+    "name": "Inglourious Basterds",
+    "genres": ["Adventure", "Drama", "War"],
+    "description": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+    "duration": 153,
+    "actors": ["Brad Pitt", "Diane Kruger"],
+    "directors": ["Quentin Tarantino"],
+    "ratings": 8.3,
+    "totalRating": 1200,
+    "releaseYear": 2009
+  },
+  {
+    "name": "The Shawshank Redemption",
+    "genres": ["Drama"],
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "duration": 142,
+    "actors": ["Tim Robbins", "Morgan Freeman"],
+    "directors": ["Frank Darabont"],
+    "ratings": 9.3,
+    "totalRating": 2200,
+    "releaseYear": 1994
+  },
+  {
+    "name": "The Godfather",
+    "genres": ["Crime", "Drama"],
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    "duration": 175,
+    "actors": ["Marlon Brando", "Al Pacino"],
+    "directors": ["Francis Ford Coppola"],
+    "ratings": 9.2,
+    "totalRating": 2000,
+    "releaseYear": 1972
+  },
+  {
+    "name": "Pulp Fiction",
+    "genres": ["Crime", "Drama"],
+    "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "duration": 154,
+    "actors": ["John Travolta", "Uma Thurman"],
+    "directors": ["Quentin Tarantino"],
+    "ratings": 8.9,
+    "totalRating": 1700,
+    "releaseYear": 1994
+  },
+  {
+    "name": "Fight Club",
+    "genres": ["Drama"],
+    "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+    "duration": 139,
+    "actors": ["Brad Pitt", "Edward Norton"],
+    "directors": ["David Fincher"],
+    "ratings": 8.8,
+    "totalRating": 1600,
+    "releaseYear": 1999
+  }
+]

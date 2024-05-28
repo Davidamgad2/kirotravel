@@ -1,0 +1,28 @@
+[{
+    "movieCount":7,
+    "movies":["The Dark Knight","Gladiator","Inglourious Basterds","The Shawshank Redemption","The Godfather","Pulp Fiction","Fight Club"],
+   "genre":"Drama"
+}
+,{
+    "movieCount":4
+    ,"movies":["Inception","The Dark Knight","The Matrix","Gladiator"],
+    "genre":"Action"
+},
+{
+    "movieCount":3,
+    "movies":["Inception","The Matrix","Quantum Nexus"],
+    "genre":"Sci-Fi"
+},
+{
+    "movieCount":3,
+    "movies":["The Dark Knight","The Godfather","Pulp Fiction"],
+    "genre":"Crime"},
+{
+    "movieCount":2,
+    "movies":["Gladiator","Inglourious Basterds"],
+    "genre":"Adventure"},
+{
+    "movieCount":1
+    ,"movies":["Inglourious Basterds"],
+    "genre":"War"
+}]
